@@ -13,7 +13,7 @@ const MONGO_URI = process.env.MONGO_URI
 
 mongoose.connect(MONGO_URI)
         .then(connection => console.log("mongodb connected"))
-        .catch(err => console.log("error created"))
+        .catch(err => console.log(`error:: ${err}`))
 
 app.get('/', (req, res) => {
         console.log("home page")
