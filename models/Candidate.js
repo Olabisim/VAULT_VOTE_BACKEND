@@ -11,6 +11,10 @@ let candidateSchema = new Schema({
                 type: String,
                 required: true
         },
+        post: {
+                type: String,
+                required: true
+        },
         email: {
                 type: String,
                 required: true
