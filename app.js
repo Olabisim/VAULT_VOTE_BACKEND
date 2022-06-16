@@ -9,6 +9,9 @@ import cors from 'cors'
 
 const app = express();
 
+app.use(express.json())
+app.use(express.static(`${__dirname}/public`))
+
 
 // CORS PROBLEM ALLOWING FRONTEND TO PROCESS HTTP METHODS
 
@@ -34,12 +37,7 @@ app.use(function (req, res, next) {
 
 // CORS PROBLEM END
 
-const port = 7000
 
-app.get('/', (req, res) => {
-        console.log("home page")
-})
+export default app;
 
-app.listen(port, (req, res) => {
-        console.log('server started')
-})
+
